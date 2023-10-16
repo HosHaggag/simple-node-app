@@ -6,11 +6,10 @@ const WEBport = process.env.WEBport || 3000
 const DBuser = process.env.DBuser
 const DBpass = process.env.DBpass
 const DBhosts = process.env.DBhosts
-const DBport = process.env.DBport || 27017
 
 async function main() {
 
-    const uri = `mongodb://${DBuser}:${DBpass}@${DBhosts}:${DBport}/test?readPreference=nearest&replicaSet=rs0&authSource=admin`;
+    const uri = `mongodb://${DBuser}:${DBpass}@${DBhosts}/test?readPreference=nearest&replicaSet=rs0&authSource=admin`;
     const client = new MongoClient(uri);
 
     try {

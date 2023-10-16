@@ -18,8 +18,7 @@ Environment variables needed for the app
    WEBport # Web app port, (optional) default: 3000
    DBuser # MongoDB user, (required) example: test
    DBpass # MongoDB pass, (required) example: test123
-   DBhosts # MongoDB host(s), (required) example: "mongo-0.mongo" or "mongo-0.mongo,mongo-1.mongo"
-   DBport # MongoDB port, (optional) default: 27017
+   DBhosts # MongoDB host(s), (required) example: "mongo-0.mongo:27017" or "mongo-0.mongo:27017,mongo-1.mongo:27000"
    ```
 
 <!-- USAGE EXAMPLES -->

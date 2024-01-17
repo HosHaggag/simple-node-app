@@ -1,0 +1,14 @@
+# loadbalancer-service.yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodejs-app-service
+  namespace: default
+spec:
+  selector:
+    app: mynodejs
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 31400  # External port
+    targetPort: 3000     

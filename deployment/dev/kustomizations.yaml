@@ -1,0 +1,10 @@
+bases:
+    - deployment.yaml
+configMapGenerator:
+    - envs:
+          - .ENV
+      name: nodejs-configmap
+      namespace: mn-app
+images:
+    - name: haggagdev/mn-node
+      newTag: latest

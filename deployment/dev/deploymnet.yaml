@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs
+  namespace: default
+  annotations:
+    configmap.reloader.stakater.com/reload: "nodejs-configmap"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mynodejs
+  template:
+    metadata:
+      labels:
+        app: mynodejs
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: nodejs
+        image: haggagdev/mn-node:1.0.1
+        ports:
+        - containerPort: 3000
+        envFrom:
+          - configMapRef:
+              name: nodejs-configmap 

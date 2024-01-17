@@ -19,7 +19,7 @@ spec:
         - name: regcred
       containers:
       - name: nodejs
-        image: haggagdev/mn-node:1.0.1
+        image: haggagdev/mn-node:1.0.3
         ports:
         - containerPort: 3000
         envFrom:

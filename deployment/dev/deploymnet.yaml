@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nodejs
-  namespace: default
+  namespace: mn-app
   annotations:
     configmap.reloader.stakater.com/reload: "nodejs-configmap"
 spec:

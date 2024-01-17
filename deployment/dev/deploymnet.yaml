@@ -15,8 +15,6 @@ spec:
       labels:
         app: mynodejs
     spec:
-      imagePullSecrets:
-        - name: regcred
       containers:
       - name: nodejs
         image: haggagdev/mn-node:1.0.3

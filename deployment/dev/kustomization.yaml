@@ -7,4 +7,4 @@ configMapGenerator:
       namespace: mn-app
 images:
     - name: haggagdev/mn-node
-      newTag: latest
+      newTag: 1.0.3
